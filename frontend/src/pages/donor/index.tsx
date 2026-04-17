@@ -40,7 +40,7 @@ export default function DonorsPage() {
       />
 
       {stage === 'dashboard' && (
-        <main className="pt-28 md:pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        <main className="pt-8 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Ambient glows */}
           <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
             <div className="absolute top-[-10%] left-[-5%] w-[50%] h-[50%] bg-blood rounded-full mix-blend-screen filter blur-[150px] opacity-5" />

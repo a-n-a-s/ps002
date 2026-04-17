@@ -19,7 +19,7 @@ export function NavigationBar({ emergencyCount, donorCount, avgTime, livesSaved 
   }, []);
 
   return (
-    <nav className="sticky top-8 z-40 min-h-12 bg-bg-primary/95 backdrop-blur-xl border-b border-white/5 flex items-center justify-between gap-3 px-3 sm:px-6 py-2">
+    <nav className="min-h-12 bg-bg-primary/95 backdrop-blur-xl border-b border-white/5 flex items-center justify-between gap-3 px-3 sm:px-6 py-2">
       {/* Logo */}
       <Link to="/" className="flex items-center gap-2.5 group">
         <div className="w-8 h-8 rounded-[50%_50%_50%_10%] bg-blood flex items-center justify-center"

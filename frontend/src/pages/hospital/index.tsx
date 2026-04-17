@@ -2,11 +2,10 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, Plus, Map, Navigation, GitBranch, Droplet } from 'lucide-react';
 import { LiveTicker, NavigationBar } from '../../components/shared';
-import { Button } from '../../components/ui';
 import { useSocket } from '../../hooks/useSocket';
 import { EmergencyList, AIMatchPanel, RightPanel, RaiseEmergencyModal } from './components';
 import { LiveMetricsBar } from '../../components/hospital/LiveMetricsBar';
-import { CommandCenterMap } from '../../components/hospital/CommandCenterMap';
+import { TomTomMap } from '../../components/hospital/TomTomMap';
 import { CascadeTimeline } from '../../components/hospital/CascadeTimeline';
 import { LiveTracking } from '../../components/hospital/LiveTracking';
 import { BloodBankPanel } from '../../components/hospital/BloodBankPanel';
@@ -61,7 +60,7 @@ export default function HospitalsPage() {
       />
 
       {/* Command center layout */}
-      <main className="flex-1 grid grid-cols-12 overflow-hidden" style={{ height: 'calc(100vh - 120px)' }}>
+      <main className="flex-1 grid grid-cols-12 overflow-hidden">
         {/* LEFT PANEL — Emergency list + AI matches */}
         <div className="col-span-12 lg:col-span-3 border-r border-white/5 flex flex-col overflow-hidden">
           <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5">
@@ -109,7 +108,11 @@ export default function HospitalsPage() {
               transition={{ duration: 0.2 }}
               className="absolute inset-0 p-4"
             >
-              {activeTab === 'map' && <CommandCenterMap />}
+              {activeTab === 'map' && (
+                <div className="absolute inset-0 p-4">
+                  <TomTomMap hospitalLocation={{ lat: 17.385, lng: 78.486 }} emergencyLocation={{ lat: 17.38, lng: 78.49 }} />
+                </div>
+              )}
               {activeTab === 'tracking' && (
                 <div className="h-full flex items-start justify-center pt-4">
                   <div className="w-full max-w-lg">

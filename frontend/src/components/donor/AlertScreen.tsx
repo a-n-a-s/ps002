@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronDown } from 'lucide-react';
-import { Button } from '../ui/Button';
 
 interface AlertScreenProps {
   bloodType: string;

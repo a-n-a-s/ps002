@@ -146,7 +146,7 @@ function LandingPage() {
 
       <NavigationBar emergencyCount={1} donorCount={142} avgTime={8} livesSaved={23} />
 
-      <main className="pt-28 md:pt-32 pb-20 px-4 sm:px-6 relative z-10">
+      <main className="pt-8 pb-20 px-4 sm:px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
 
           {/* Hero */}

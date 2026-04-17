@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Bot, MapPin, Zap, Phone, MessageSquare, Bell, TrendingUp } from 'lucide-react';
 import { AI_MATCHES } from '../../../data/mock';
 import { SurvivalMeter } from '../../../components/shared/SurvivalMeter';
