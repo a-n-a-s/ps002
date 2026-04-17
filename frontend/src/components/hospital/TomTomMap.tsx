@@ -40,8 +40,6 @@ export function TomTomMap({
       attributionControl: false,
     });
 
-    mapInstanceRef.current.addControl(new mapboxgl.NavigationControl(), 'top-right');
-
     mapInstanceRef.current.on('load', () => {
       addVisualElements();
     });
@@ -350,12 +348,12 @@ export function TomTomMap({
         type: 'circle',
         source: 'emergency-zone',
         paint: {
-          'circle-radius': 50,
+          'circle-radius': 120,
           'circle-color': '#FF003C',
-          'circle-opacity': 0.15,
-          'circle-stroke-width': 2,
+          'circle-opacity': 0.2,
+          'circle-stroke-width': 3,
           'circle-stroke-color': '#FF003C',
-          'circle-stroke-opacity': 0.5
+          'circle-stroke-opacity': 0.6
         }
       });
     }
@@ -402,7 +400,7 @@ export function TomTomMap({
         </div>
         <div className="bg-red-500/20 backdrop-blur-sm px-3 py-1.5 rounded border border-red-500/40 text-right">
           <div className="text-xs text-red-300">Emergency Zone</div>
-          <div className="text-sm font-bold text-red-500">500m radius</div>
+          <div className="text-sm font-bold text-red-500">2km radius</div>
         </div>
       </div>
     </div>
